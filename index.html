@@ -1,9 +1,15 @@
 <html>
 <head>
+<python>
+@app.route('/handle_data', methods=['POST'])
+def handle_data():
+    projectpath = request.form['projectFilepath']
+    #your code
+</python>
 </head>
 <body>
 <h1>UpX Academy ML on Azure demo</h1>
-  <form method = "POST" action="action_page.python">
+  <form method = "POST" action="{{ url_for('handle_data') }}">
   Car make:<br>
   <input type="text" name="firstname"><br>
   Price range:<br>
